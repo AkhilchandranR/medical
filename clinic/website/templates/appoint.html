@@ -1,0 +1,11 @@
+{% extends 'base-inner.html' %}
+{% load static %}
+{% block content %}
+<br>
+<h2>fill your details</h2><br>
+<form method="post" class="post-form" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="save btn btn-success">Make appointment</button>
+
+{% endblock content %}

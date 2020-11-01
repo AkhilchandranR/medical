@@ -1,0 +1,13 @@
+{% extends 'base-inner.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+<h1><u>Contact us</u></h1><br>
+<h5>please send us your queries our staff will contact you!!!</h5>
+<form method="post" class="post-form" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="save btn btn-success">send</button>
+</form>
+</div>
+{% endblock content %}
